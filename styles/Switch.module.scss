@@ -1,0 +1,41 @@
+.switch {
+    display: flex;
+    justify-content: flex-end;
+    width: 64px;
+    margin: 0px 12px;
+}
+.slider {
+    height: 4px;
+    border-radius: 4px;
+    width: 64px;
+    position: absolute;
+    margin-top: 9px;
+    z-index: 3;
+    transition: all 400ms;
+}
+.button {
+    height: 21px;
+    width: 21px;
+    border-radius: 50%;
+    border: none;
+    z-index: 4;
+    color: white;
+}
+.blue {
+    background-color: rgb(64, 111, 212);
+    transition: 400ms;
+    &:hover {
+        background-color: rgb(111, 145, 236);
+        box-shadow: inset 0px 0px 2px #aad, 0px 0px 4px #aad;
+    }
+}
+.dark {
+    background-color: #2c2c2c;
+}
+.light {
+    background-color: #fff;
+}
+.off {
+    box-shadow: inset 0px 0px 2px #aad, 0px 0px 6px #aad;
+    transform: translateX(-48px);
+}

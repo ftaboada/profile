@@ -1,0 +1,35 @@
+@mixin contain {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.container {
+    height: 720px;
+    max-width: 512px;
+    border-radius: 8% 6px 8% 6px;
+    @include contain;
+}
+.dark {
+    border: solid 2px rgba(255, 255, 255, 0.1);
+    background-color: rgba(0, 0, 0, 0.08);
+    box-shadow: inset 0px 0px 3px (255, 255, 255, 0.1),
+        0px 0px 0px 10px (200, 200, 200, 0.1);
+}
+.ligth {
+    border: solid 2px rgba(0, 0, 0, 0.05);
+    background-color: rgba(0, 0, 0, 0.029);
+    box-shadow: inset 0px 0px 12px (0, 0, 0, 0.25),
+        0px 0px 0px 25px (0, 0, 0, 0.15);
+}
+.card {
+    height: 700px;
+    max-width: 512px;
+    @include contain;
+    border-radius: 0px 8px 8px 8px;
+}
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 18px;
+}

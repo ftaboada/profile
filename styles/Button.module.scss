@@ -1,0 +1,85 @@
+@use 'constants/colors.scss';
+
+@mixin Button {
+    font-family: Ubuntu;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    padding: 6px 18px;
+    p {
+        margin: 3px 10px;
+        font-size: 22px;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+    transition: all 250ms;
+}
+.filled {
+    @include Button;
+    color: #fff !important;
+}
+.transparent {
+    @include Button;
+    border: none !important;
+    background: none !important;
+    &:hover {
+        background-color: rgba(0, 0, 0, 0.07) !important;
+    }
+    &:active {
+        background-color: rgba(0, 0, 0, 0.05) !important;
+    }
+}
+.outlined {
+    @include Button;
+    background: none !important;
+}
+.blue {
+    background-color: colors.$blue;
+    color: colors.$blue;
+    box-sizing: border-box;
+    border: solid 3px colors.$blue;
+    &:hover {
+        background-color: colors.$blue_hover;
+        border: solid 3px colors.$blue_hover;
+        cursor: pointer;
+    }
+    &:active {
+        background-color: colors.$blue_active;
+        border: solid 3px colors.$blue_active;
+        p,
+        svg {
+            transform: translateY(1px);
+        }
+    }
+}
+.red {
+    background-color: colors.$red;
+    color: colors.$red;
+    box-sizing: border-box;
+    border: solid 3px colors.$red;
+    &:hover {
+        background-color: colors.$red_hover;
+        border: solid 3px colors.$red_hover;
+        cursor: pointer;
+    }
+    &:active {
+        background-color: colors.$red_active;
+        border: solid 3px colors.$red_active;
+        p,
+        svg {
+            transform: translateY(1px);
+        }
+    }
+}
+.green {
+}
+.BW {
+}
+.shadow {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.08);
+    &:hover {
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2),
+            inset 0px 0px 4px rgba(0, 0, 0, 0.2);
+    }
+}

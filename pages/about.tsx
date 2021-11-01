@@ -6,25 +6,25 @@ import { Card } from '@components/modules'
 import { useDarkMode } from 'ctx'
 import styles from '@styles/Home.module.scss'
 
-const Home: NextPage<{ isMobile: boolean }> = ({ isMobile }) => {
+const About: NextPage<{ isMobile: boolean }> = ({ isMobile }) => {
     const { darkMode } = useDarkMode()
     return (
         <div className={styles.container}>
             <Head>
-                <title>Felipe Taboada Profile</title>
+                <title>Sobre mí</title>
                 <meta
-                    name="A page about myself and my software skills"
-                    content="just a profile"
+                    name="Sección para conocerme, para saber"
+                    content="descripción"
                 />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
 
             <main className={darkMode ? styles.mainDark : styles.main}>
                 {isMobile ? (
-                    <Card option={0} isMobile />
+                    <Card option={1} isMobile />
                 ) : (
                     <>
-                        <Card option={0} />
+                        <Card option={1} />
                     </>
                 )}
             </main>
@@ -32,7 +32,7 @@ const Home: NextPage<{ isMobile: boolean }> = ({ isMobile }) => {
     )
 }
 
-Home.getInitialProps = async (ctx) => {
+About.getInitialProps = async (ctx) => {
     let isMobileView = (
         ctx?.req ? ctx?.req?.headers['user-agent'] : navigator?.userAgent
     ) as string
@@ -41,4 +41,4 @@ Home.getInitialProps = async (ctx) => {
         isMobile,
     }
 }
-export default Home
+export default About

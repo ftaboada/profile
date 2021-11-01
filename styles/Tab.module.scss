@@ -1,0 +1,50 @@
+@use 'constants/colors';
+
+@mixin button {
+    font-family: Ubuntu;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px 4px 0px 0px;
+    padding: 3px 6px;
+
+    border: none;
+    height: 36px;
+    p {
+        margin: 3px 10px;
+        font-size: 16px;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+    transition: all 250ms;
+    background: none;
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.selected {
+    @include button;
+    color: colors.$blue;
+    border-bottom: solid 2px colors.$blue;
+    margin-bottom: -2px;
+}
+
+.unselected {
+    @include button;
+    color: colors.$blue_active;
+    &:hover {
+        color: colors.$blue_hover;
+        border-bottom: solid 2px colors.$blue_hover;
+        box-sizing: border-box;
+        p {
+            padding-top: 2px;
+        }
+    }
+}
+.container {
+    display: flex;
+    width: max-content;
+    justify-content: space-between;
+    margin: 0px 24px;
+}
