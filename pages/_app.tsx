@@ -4,6 +4,7 @@ import '@fortawesome/fontawesome-free/css/all.css'
 import { DarkModeProvider } from 'ctx'
 
 function MyApp({ Component, pageProps }: AppProps) {
+    console.log('Hello World, welcome to my space in the web')
     return (
         <>
             <DarkModeProvider>

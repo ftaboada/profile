@@ -21,7 +21,9 @@
             "@lang/*": ["lang/*"],
             "@helpers": ["helpers/"],
             "@ctx": ["ctx/"],
-            "@services": ["services/"]
+            "@services": ["services/"],
+            "@types": ["types/"],
+            "@balidations": ["validations/"]
         }
     },
     "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],

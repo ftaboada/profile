@@ -11,6 +11,8 @@ export const Button: FC<ButtonProps> = ({
     color = 'blue',
     shadow = false,
     disabled = false,
+    size = 'sm',
+    circular = false,
 }) => {
     const isLeft = iconPosition === 'left'
 
@@ -19,18 +21,18 @@ export const Button: FC<ButtonProps> = ({
             onClick={onClick}
             className={`${styles[variant]} ${styles[color]} ${
                 shadow ? styles.shadow : ''
-            }`}
+            } ${styles[size]} ${circular ? styles.circular : ''}`}
             disabled={disabled}
         >
             {isLeft && Icon && <Icon />}
-            <p style={{ fontSize }}>{innerText}</p>
+            {innerText && <p style={{ fontSize }}>{innerText}</p>}
             {!isLeft && Icon && <Icon />}
         </button>
     )
 }
 
 interface ButtonProps {
-    innerText: string
+    innerText?: string
     onClick(): void
     fontSize?: string
     Icon?: FC
@@ -39,4 +41,6 @@ interface ButtonProps {
     color?: 'blue' | 'red' | 'green' | 'B&W'
     shadow?: boolean
     disabled?: boolean
+    size?: 'sm' | 'lg' | 'xl'
+    circular?: boolean
 }

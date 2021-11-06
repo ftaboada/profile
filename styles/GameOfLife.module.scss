@@ -1,0 +1,12 @@
+.container {
+    width: 236px;
+    flex-grow: 2;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column-reverse;
+}
+.buttons {
+    margin-top: 12px;
+    display: flex;
+    justify-content: space-evenly;
+}

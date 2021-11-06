@@ -1,0 +1,58 @@
+@use 'constants/colors';
+@mixin p {
+    p {
+        text-align: justify;
+        text-justify: inter-word;
+        margin: 12px 15px 0px 0px;
+        font-size: 14px;
+    }
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 92%;
+    height: 92%;
+    padding: 12px 18px;
+    border-radius: 8px;
+}
+.gameContainer {
+    display: flex;
+    flex-direction: row-reverse;
+    width: 100%;
+    @include p;
+    p {
+        margin: 0px 5px;
+        a {
+            color: colors.$blue;
+            text-decoration: none;
+        }
+    }
+}
+.textContainer {
+    margin-top: 4px;
+    @include p;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.color {
+    color: white;
+    a {
+        color: colors.$blue_active;
+    }
+}
+.img {
+    border-radius: 50%;
+    border: 1px solid #e0e0e0;
+    margin: 4px;
+    height: 128px;
+    width: 128px;
+    object-fit: cover;
+}
+.buttonContainer {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 56px;
+}

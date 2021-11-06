@@ -1,0 +1,42 @@
+@use 'constants/colors';
+
+.container {
+    overflow: hidden;
+    position: fixed;
+    padding: 0;
+    margin: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    padding: 36px;
+}
+.snackbar {
+    min-width: 112px;
+    max-width: 264px;
+    border-radius: 8px;
+    min-height: 60px;
+    display: flex;
+    align-items: center;
+    p {
+        margin-left: 5px;
+        color: white;
+        font-family: Ubuntu;
+        font-weight: 400;
+        font-size: 16px;
+    }
+    svg {
+        font-size: 16px;
+        color: white;
+    }
+}
+.red {
+    background-color: colors.$red;
+}
+.green {
+    background-color: colors.$green;
+}
+.blue {
+    background-color: colors.$blue;
+}

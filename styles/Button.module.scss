@@ -5,14 +5,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 4px;
-    padding: 6px 18px;
-    p {
-        margin: 3px 10px;
-        font-size: 22px;
-        font-weight: bold;
-        text-transform: uppercase;
-    }
     transition: all 250ms;
 }
 .filled {
@@ -81,5 +73,83 @@
     &:hover {
         box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2),
             inset 0px 0px 4px rgba(0, 0, 0, 0.2);
+    }
+}
+.sm {
+    border-radius: 4px;
+    padding: 4px 10px;
+    p {
+        margin: 1px 1px;
+        font-size: 16px;
+        font-weight: 800;
+        text-transform: uppercase;
+    }
+    svg {
+        font-size: 20px;
+        margin: 0;
+        padding: 0;
+    }
+}
+.lg {
+    border-radius: 4px;
+    padding: 6px 16px;
+    p {
+        margin: 3px 10px;
+        font-size: 22px;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+    svg {
+        font-size: 28px;
+        margin: 2px 8px;
+    }
+}
+.xl {
+    border-radius: 4px;
+    padding: 12px 24px;
+    margin: 0px 0px 0px 56px;
+    p {
+        margin: 3px 10px;
+        font-size: 20px;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+    font-size: 20px;
+}
+.circular {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+}
+.disabled {
+    background-color: #e0e0e0;
+    color: #3c3c3c !important;
+    border: #e0e0e0 solid 1px;
+    box-sizing: border-box;
+    &:hover {
+        background-color: #e0e0e0;
+        color: #3c3c3c !important;
+        border: #e0e0e0 solid 1px;
+        cursor: default;
+    }
+    &:active {
+        background-color: #e0e0e0;
+        color: #3c3c3c !important;
+        border: #e0e0e0 solid 1px;
+    }
+}
+
+.tooltip {
+    position: absolute;
+    padding: 10px 18px;
+    max-width: 264px;
+    border-radius: 8px;
+    background-color: #3c3c3c;
+    margin: -60px 0px 0px -30px;
+    p {
+        color: #fff;
+        font-size: 14px;
+        text-align: justify;
+        text-justify: inter-word;
     }
 }

@@ -1,0 +1,67 @@
+@use 'constants/colors';
+
+.input {
+    border: none;
+    height: 28px;
+    border-radius: 4px;
+    margin: 2px 0px 0px 12px;
+    box-sizing: border-box;
+    font-size: 20px;
+    font-family: Ubuntu;
+    padding: 10px 16px;
+}
+.size {
+    width: 324px;
+    height: 48px;
+}
+.label {
+    font-family: Ubuntu;
+    font-size: 20px;
+    color: colors.$blue;
+    margin: 2px 0px 0px 12px;
+}
+.areaSize {
+    width: 324px;
+    height: 200px;
+}
+.password {
+    padding-left: 40px;
+}
+@mixin ligthing {
+    &:focus {
+        outline: none;
+    }
+    &:active {
+        border: none;
+        outline: none;
+    }
+    &:hover {
+        outline: none;
+    }
+}
+.light {
+    @include ligthing;
+    &:hover {
+        border: solid 2px colors.$blue_hover;
+    }
+    &:focus {
+        border: solid 2px colors.$blue;
+    }
+}
+.dark {
+    @include ligthing;
+    &:hover {
+        border: solid 3px colors.$blue_hover;
+    }
+    &:focus {
+        border: solid 3px colors.$blue;
+    }
+}
+.container {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    margin: 18px 44px;
+    align-items: space-around;
+    justify-content: space-between;
+}

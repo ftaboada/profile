@@ -1,3 +1,8 @@
 export { Button } from './button'
 export { Switch } from './switch'
 export { Tabs } from './tabs'
+export { TextInput } from './input/text'
+export { TextArea } from './input/textarea'
+export { Label } from './input/label'
+export { Submit } from './input/submit'
+export { Snackbar } from './snackbar'
